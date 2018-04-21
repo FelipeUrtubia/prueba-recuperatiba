@@ -1,0 +1,38 @@
+<h1>Bienvenido a Pokemon-Online!</h1>
+<br><br>
+<div class="row">
+  <div class="col-sm-6">
+    <h3>Esta es la lista de pokemons que has capturado!</h3><br><br>
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th></th>
+          <th colspan="3"></th>
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
+  </div>
+  <div class="col-sm-6">
+    <h3>Esta es la lista de pokemons que puedes capturar!</h3><br><br>
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th colspan="3"></th>
+      </thead>
+      <tbody>
+        <% @pokemons.each do |pokemon| %>
+          <tr>
+            <td><%= pokemon.name %></td>
+            <td>
+              <link rel="" href="#">
+              <%= image_tag("icon.png", size: "40", alt: "Capturalo!")%>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
